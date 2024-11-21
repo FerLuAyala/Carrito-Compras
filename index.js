@@ -1,3 +1,4 @@
+
 const url = "productos.json";
 const contenedorTarjetas = document.getElementById('productos');
 const filtroCategoria = document.getElementById('filtro-categoria');

@@ -11,12 +11,33 @@ class Carrito {
         } else {
             this.carrito[index].cantidad++;
         }
+    
         this.actualizarCarrito();
-        
+        this.mostrarAlerta("Producto agregado al carrito");
+    }
+    
+    mostrarAlerta(mensaje) {
+      
+        const alerta = document.createElement('div');
+        alerta.classList.add('alert', 'alert-success', 'alert-dismissible', 'fade', 'show');
+        alerta.role = 'alert';
+        alerta.innerHTML = `
+            ${mensaje}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        `;
+    
+      
+        const contenedorAlertas = document.getElementById('alertas');
+        contenedorAlertas.appendChild(alerta);
+    
+        // Eliminar la alerta después de 5 segundos
+        setTimeout(() => {
+            alerta.remove();
+        }, 5000);
     }
 
     actualizarCarrito() {
-        // Actualizar la cantidad total de productos y el total del carrito en la UI
+        // Actualizar la cantidad total de productos y el total del carrito 
         document.querySelector('.cantidadCarrito').textContent = this.carrito.reduce((total, item) => total + item.cantidad, 0);
         document.querySelector('.totalCarrito').textContent = this.obtenerTotal().toFixed(2);
 
