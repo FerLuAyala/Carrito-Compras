@@ -137,12 +137,12 @@ function mostrarDetalleProducto(producto) {
     modalTitle.textContent = 'Detalle del Producto';
     modalHeader.appendChild(modalTitle);
 
-    const closeButton = document.createElement('button');
-    closeButton.type = 'button';
-    closeButton.classList.add('btn-close');
-    closeButton.setAttribute('data-bs-dismiss', 'modal');
-    closeButton.setAttribute('aria-label', 'Close');
-    modalHeader.appendChild(closeButton);
+    const cerrar = document.createElement('button');
+    cerrar.type = 'button';
+    cerrar.classList.add('btn-close');
+    cerrar.setAttribute('data-bs-dismiss', 'modal');
+    cerrar.setAttribute('aria-label', 'Close');
+    modalHeader.appendChild(cerrar);
 
     // Modal body
     const modalBody = document.createElement('div');
@@ -163,9 +163,9 @@ function mostrarDetalleProducto(producto) {
     modalImage.classList.add('img-fluid', 'mb-3');
     modalBody.appendChild(modalImage);
 
-    const priceParagraph = document.createElement('p');
-    priceParagraph.innerHTML = `<strong>Precio:</strong> $<span id="modalProductoPrecio">${producto.precio}</span>`;
-    modalBody.appendChild(priceParagraph); 
+    const precioModal = document.createElement('p');
+    precioModal.innerHTML = `<strong>Precio:</strong> $<span id="modalProductoPrecio">${producto.precio}</span>`;
+    modalBody.appendChild(precioModal); 
     
     const modalDescription = document.createElement('p');
     modalDescription.id = 'modalProductoDescripcion';
@@ -179,17 +179,17 @@ function mostrarDetalleProducto(producto) {
     modalFooter.classList.add('modal-footer');
     modalContent.appendChild(modalFooter);
 
-    const botonCerrar = document.createElement('button');
-    botonCerrar.type = 'button';
-    botonCerrar.classList.add('btn', 'btn-secondary');
-    botonCerrar.setAttribute('data-bs-dismiss', 'modal');
-    botonCerrar.textContent = 'Cerrar';
-    modalFooter.appendChild(botonCerrar);
+    const cerrarFooter = document.createElement('button');
+    cerrarFooter.type = 'button';
+    cerrarFooter.classList.add('btn', 'btn-secondary');
+    cerrarFooter.setAttribute('data-bs-dismiss', 'modal');
+    cerrarFooter.textContent = 'Cerrar';
+    modalFooter.appendChild(cerrarFooter);
 
-    const botAgregar = document.createElement('button');
-    botAgregar.classList.add('btn','btn-agregarModal' , 'btn-success');
-    botAgregar.textContent = 'Agregar al carrito';
-    botAgregar.appendChild(botAgregar);
+    const agregarBo = document.createElement('button');
+    agregarBo.classList.add('btn','btn-agregarModal' , 'btn-success');
+    agregarBo.textContent = 'Agregar al carrito';
+    modalFooter.appendChild(agregarBo);
 
     // Agregar el modal al cuerpo de la página
     document.body.appendChild(modal);
@@ -199,14 +199,14 @@ function mostrarDetalleProducto(producto) {
     bootstrapModal.show();
 
     // Agregar el evento para el botón de "Agregar al carrito"
-    botAgregar.addEventListener('click', () => {
+    agregarBo.addEventListener('click', () => {
         agregarAlCarrito(producto);
         bootstrapModal.hide();
         modal.remove();  // Remover el modal después de cerrar
     });
 
     // Eliminar el modal cuando se cierra
-    closeButton.addEventListener('click', () => {
+    cerrar.addEventListener('click', () => {
         modal.remove();
     });
 }
