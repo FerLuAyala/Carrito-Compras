@@ -43,7 +43,13 @@ class Carrito {
 
         mostrarCarrito(); 
     }
+
+    vaciarCarrito() {
+        this.carrito = []; 
+        this.actualizarCarrito(); 
+    }
 }
+
 
 // INICIAR CARRITO------------------------------------------------------------------------------------------------------
 

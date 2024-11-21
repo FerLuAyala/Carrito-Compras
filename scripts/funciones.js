@@ -179,17 +179,17 @@ function mostrarDetalleProducto(producto) {
     modalFooter.classList.add('modal-footer');
     modalContent.appendChild(modalFooter);
 
-    const closeButtonFooter = document.createElement('button');
-    closeButtonFooter.type = 'button';
-    closeButtonFooter.classList.add('btn', 'btn-secondary');
-    closeButtonFooter.setAttribute('data-bs-dismiss', 'modal');
-    closeButtonFooter.textContent = 'Cerrar';
-    modalFooter.appendChild(closeButtonFooter);
+    const botonCerrar = document.createElement('button');
+    botonCerrar.type = 'button';
+    botonCerrar.classList.add('btn', 'btn-secondary');
+    botonCerrar.setAttribute('data-bs-dismiss', 'modal');
+    botonCerrar.textContent = 'Cerrar';
+    modalFooter.appendChild(botonCerrar);
 
-    const addButton = document.createElement('button');
-    addButton.classList.add('btn','btn-agregarModal' , 'btn-success');
-    addButton.textContent = 'Agregar al carrito';
-    modalFooter.appendChild(addButton);
+    const botAgregar = document.createElement('button');
+    botAgregar.classList.add('btn','btn-agregarModal' , 'btn-success');
+    botAgregar.textContent = 'Agregar al carrito';
+    botAgregar.appendChild(botAgregar);
 
     // Agregar el modal al cuerpo de la página
     document.body.appendChild(modal);
@@ -199,7 +199,7 @@ function mostrarDetalleProducto(producto) {
     bootstrapModal.show();
 
     // Agregar el evento para el botón de "Agregar al carrito"
-    addButton.addEventListener('click', () => {
+    botAgregar.addEventListener('click', () => {
         agregarAlCarrito(producto);
         bootstrapModal.hide();
         modal.remove();  // Remover el modal después de cerrar
@@ -307,6 +307,8 @@ function mostrarCarrito() {
 
             });
 
+           
+            
             
 
         });
@@ -322,14 +324,32 @@ function mostrarCarrito() {
         const totalProductos = document.createElement('p');
         totalProductos.textContent = `Total de productos: ${carrito.carrito.reduce((acc, prod) => acc + prod.cantidad, 0)}`;
 
+        const finalizarCompra = document.createElement('button');
+        finalizarCompra.classList.add('button', 'aceptar');
+        finalizarCompra.textContent = 'Finalizar Compra';
+
+
         totalCarrito.appendChild(totalTexto);
         totalCarrito.appendChild(totalProductos);
         contenedorCarrito.appendChild(totalCarrito);
+        totalCarrito.appendChild(finalizarCompra);
 
 
-          }
+        finalizarCompra.addEventListener('click', () => {
+          
+            const mensajeCompra = document.createElement('h4');
+            mensajeCompra.textContent = 'Operación realizada, Gracias por tu compra!';
+            contenedorCarrito.innerHTML = '';
+            contenedorCarrito.appendChild(mensajeCompra);
+            carrito.vaciarCarrito();
+         
+         });
+         
+     }
     agregarEventosSumarRestar();
 
+
+    
 }
 
 function agregarEventosSumarRestar() {

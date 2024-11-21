@@ -2,7 +2,7 @@
     {
         "id": 1,
         "nombre": "Smart Tv Samsung 55 QLED",       
-        "precio": 605325,
+        "precio": 6053,
         "imagen": "img/tv.jpg",
         "categoría": "tv",
         "descripcion": "Esta tv ofrece una experiencia visual excepcional con su impresionante resolución 4K Ultra HD de 3840 x 2160 píxeles y una frecuencia de actualización de 60 Hz, que garantiza imágenes nítidas y suaves, cuenta con un sintonizador digital TDA, con tecnología Quantum HDR proporciona un amplio rango de contraste en una escala cinematográfica, la pantalla AirSlim es elegante y delgada, la característica Quantum Dot capta la luz y la convierte en colores deslumbrantes que se mantienen fieles en cualquier nivel de brillo, el control remoto ecológico SolarCell Remote posee un panel solar, puedes cargarlo con luz solar, luz ambiente o mediante USB Tipo C."
@@ -11,7 +11,7 @@
     {
         "id": 2,
         "nombre": "Heladera Cíclica Drean HDR320F00N 314Lts",
-        "precio": 1200500,
+        "precio": 1200,
         "imagen": "img/heladera.jpg",
         "categoría": "electrodomestico",
         "descripcion": "Nueva heladera Drean Cycle Defrost cuenta con una capacidad neta de 302 lts esto se divide en 105 lts en el freezer XXL y 197 litros en el refrigerador, eficiencia energética A , estantes regulables en altura en freezer y refrigerador, anaqueles en contrapuerta, para botellas y alimentos regulable en altura, cajón especial para frutas y verduras, control de temperatura interior, apertura de puerta controlada y luz LED en el interior. Volumen Bruto ( Lts) 314   Freezer: 109 Lts  Refrigerador: 205 Lts"
@@ -19,7 +19,7 @@
     {
         "id": 3,
         "nombre": "Parlante Portátil Aiwa AW-T600D-SN 5000Watts",
-        "precio": 333303,
+        "precio": 3303,
         "imagen": "img/parlante.jpg",
         "categoría": "tecnologia",
         "descripcion": "Parlante Portátil Aiwa AW-T600D, de 5000W PMPO, equipado con 2 woofers de 8 y 1 tweeter de 1, ofrece un sonido claro y potente, puedes ajustar el volumen y el eco del micrófono, y monitorear tu configuración a través de su práctico display, incluyendo entradas auxiliar y de micrófono, así como Bluetooth, lo que facilita la conexión de tus dispositivos preferidos para reproducir música, la batería recargable de 7.4V/1800mAh asegura horas de diversión, además, las luces integradas crean un ambiente vibrante y festivo, la función TWS (True Wireless Stereo) te permite emparejar dos de estos parlantes para obtener un sonido estéreo, con su empuñadura de transporte, ruedas resistentes y un práctico Mobile Holder."
@@ -28,7 +28,7 @@
     {
         "id": 4,
         "nombre": "Computadora Gamer Gfast X-501 Rooki Intel Core I5 16GB/240GB",
-        "precio": 223300,
+        "precio": 2250,
         "imagen": "img/compu.jpg",
         "categoría": "tecnologia",
         "descripcion": "Computadora Gamer Gfast X-501, equipada con un procesador Intel Core i5 11400 y 16GB de memoria DDR4 RGB te ofrece un rendimiento óptimo para tus sesiones de juego, su almacenamiento de 240GB SSD garantiza tiempos de carga rápidos y un sistema ágil, mientras que la placa de video integrada en el procesador brinda gráficos fluidos, el diseño impactante se completa con turbinas multicolor y un panel lateral de vidrio templado, que permite ver el interior de la máquina, con una fuente de alimentación de 600W, cuenta con múltiples puertos para conexiones versátiles, incluyendo HDMI, DisplayPort, USB 3.0 y 3.2, y audio jack, asegurando compatibilidad con todos tus periféricos y una experiencia de juego inmersiva."
@@ -38,7 +38,7 @@
     {
         "id": 5,
         "nombre": "Licuadora Ultracomb LC-2007 1.5Lts 650Watts",
-        "precio": 10752,
+        "precio": 1072,
         "imagen": "img/licuadora.jpeg",
         "categoría": "electrodomestico",
         "descripcion": "Licuadora Ultracomb LC-2007, cuenta con una jarra plástica graduada de 1,5 litros y un motor ultra potente de 650 watts, ofrece 2 velocidades y un pulsador para auto limpieza y batido espeso, así como un porta cuchillas y cuchillas de acero inoxidable con 4 hojas, su tapa cuenta con un sistema anti derrame y una sobretapa para inspección y dosificador, posee soportes antideslizantes para mayor estabilidad y un elegante diseño con una sólida construcción, con esta licuadora, se pueden preparar rápidamente una infinidad de batidos, cócteles, cremas y salsas, es una excelente opción para aquellos que buscan una licuadora de alta calidad y rendimiento en su cocina."
@@ -47,7 +47,7 @@
     {
         "id": 6,
         "nombre": "Smart Tv Kanji 32 KJ-32MT005 HD Android Tv",
-        "precio": 825000,
+        "precio": 8200,
         "imagen": "img/tv2.jpg",
         "categoría": "tv",
         "descripcion": "con resolución HD (1366x768p) y sistema operativo Android Tv, disfruta de la comodidad de controlarlo con tu voz gracias a Hey Google, accede a una amplia variedad de aplicaciones y contenidos a través de Google Play, con la función Chromecast incorporada, puedes transmitir tus programas y películas favoritas desde dispositivos móviles compatibles, experimenta un sonido de alta calidad con Dolby Audio, accede a las plataformas mas populares como Netflix, YouTube, Prime Video, y sincronización TDA."
@@ -55,7 +55,7 @@
     {
         "id": 7,
         "nombre": "Smart Tv Motorola 32 MT32E3A HD Android Tv",
-        "precio": 552300,
+        "precio": 5500,
         "imagen": "img/tv3.jpg",
         "categoría": "tv",
         "descripcion": "Smart Tv Motorola 32 MT32E3A, con una resolución HD, ofrece imágenes nítidas y claras, con Chromecast integrado, disfruta de tus películas, series y videos favoritos desde tu dispositivo móvil directamente a tu Tv, experimenta la mejor calidad de imagen con HDR (Alto Rango Dinámico), que proporciona colores más vibrantes y detalles más realistas, con Android Tv y Hey Google, accede fácilmente a una amplia variedad de aplicaciones y contenido en línea a través de Google Play, sintoniza tus canales favoritos con el sintonizador TDA incorporado, que te permite disfrutar de una amplia gama de canales de televisión digital de forma gratuita, con una frecuencia de 60Hz, disfruta de una reproducción suave y sin interrupciones."
@@ -64,7 +64,7 @@
     {
         "id": 8,
         "nombre": "Cocina Escorial Master Classic Gas Envasado 56Cm",
-        "precio": 223030,
+        "precio": 2230,
         "imagen": "img/cocina.jpg",
         "categoría": "electrodomestico",
         "descripcion": "Cocina Escorial modelo Master Classic cuenta con puerta de vidrio y reja de horno esmaltada, las superficies exteriores e interiores del horno totalmente enlozados en polvo electrónico de fácil limpieza.Rejilla desmontable en plancha, 4 hornallas ( tres medianas y una grande), válvula de seguridad en hornallas y horno, los quemadores son de aluminio pulido con tapa de acero esmaltada.Manija de horno y parrilla en acero pintado, la puerta del horno con bisagras desmontables, cajón parrilla con puerta rebatible, asadera.Eficiencia energética: A"
@@ -74,7 +74,7 @@
     {
         "id": 9,
         "nombre": "Heladera2 Side by Side Samsung RS27T5561B1/BG 685Lts Inverter",
-        "precio": 900750,
+        "precio": 9007,
         "imagen": "img/heladera2.jpg",
         "categoría": "electrodomestico",
         "descripcion": "La heladera Samsung es una innovación en heladeras con el Wifi integrado en la family hub te ofrece una forma mas simple de compartir imágenes, administrar calendarios familiares y mantenerte conectado, también podes mirar Tv, usar aplicaciones desde tu celular y reproducir música en Spotify, compartí noticias y recuerdos familiares (family board), podes ver desde tu celular lo que hay adentro de tu heladera en cualquier momento y en cualquier lugar gracias a la cámara integrada."

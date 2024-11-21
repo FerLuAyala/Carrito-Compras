@@ -46,10 +46,15 @@ h1 {
 }
 
 h2{
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 600;
     margin: auto;
+    color: #d0e0e3;
     text-transform: uppercase;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 0.3rem solid rgb(209, 119, 15);
+    text-align: center;
     
     
 }
@@ -59,6 +64,31 @@ h3{
     font-size: 1.5rem;
 }
 
+h4 {
+    padding:3rem;
+    border: 1px solid rgb(221, 205, 205);
+    background-color: #e9e8e7;
+    color: #eb5b08;
+    border-radius: 8px;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.466);
+
+}
+
+.aceptar {
+    
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.25rem 0.5rem;
+    background: #049718;
+    cursor: pointer;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    text-align: center;
+    width: 100%;
+    color: #d0e0e3;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.459);
+}
 
 
 
@@ -344,6 +374,7 @@ span.card-text {
     font-size: 1rem;
     border-radius: 5px;
     background-color: #dc9935;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.459);
     color: white;
     border: none;
     cursor: pointer;
@@ -363,26 +394,9 @@ span.card-text {
     padding: 0.2rem 2rem 0.2rem 2rem;
     background-color: #f8f8f7;
     border: solid 1px rgb(252, 114, 51);
+    
 }
 
-.eliminarProducto {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin: auto;
-    text-transform: uppercase;
-    border-radius: 5px;
-    background-color: #dc3545;
-    width: 50%;
-    align-items: center;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.eliminarProducto:hover {
-    background-color: #c82333;
-}
 
 /* Estilo para la sección de total del carrito */
 .resultado {
@@ -398,7 +412,8 @@ span.card-text {
 
 .resultado p {
     font-size: 1.5rem;
-    color: #218838;
+    font-weight: 600;
+    color: #ff6309;
 }
 
 .resultado p:last-child {
