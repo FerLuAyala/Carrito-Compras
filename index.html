@@ -13,8 +13,25 @@
 
 <body>
 
-    <header class="p-2">
-       <h1>Programación I | Parcial 2 | Ayala | Mi carrito</h1>                 
+  
+    <header class="navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top" style="flex: auto">
+        <!-- Reemplazar por los datos que correspondan -->
+        <div class="container">
+            <h1>Programación I</h1>
+            <div class="nav-btns">
+                <button type="button" class="btn position-relative" data-bs-toggle="modal" data-bs-target="#cart">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge bg-primary">0</span>
+                </button>
+                <button type="button" class="btn position-relative">
+                    <i class="fa fa-heart"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge bg-primary">0</span>
+                </button>
+                <button type="button" class="btn position-relative">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+        </div>
     </header>
 
     <div id="carouselExample" class="carousel slide">

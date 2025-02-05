@@ -138,35 +138,18 @@ span.card-text {
 
 
 
-.btn-agregar {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    font-size: 1.3rem;
-    font-weight: 600;
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
     cursor: pointer;
-    background-color: #28a745;
-    color: white;
+    transition: 0.3s;
     border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-
-.btn-detalle{
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    font-size: 1.3rem;
-    font-weight: 600;
-    cursor: pointer;
-    background-color: #e68327;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+  
 }
 
 .btn-mostrar{
@@ -198,7 +181,7 @@ span.card-text {
     transition: background-color 0.3s;
 }
 .btn-agregar:hover {
-    background-color: #218838;
+    background-color: #fc8d43;
 }
 .btn-detalle:hover {
     background-color: #884721;
