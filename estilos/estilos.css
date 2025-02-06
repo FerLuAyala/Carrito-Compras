@@ -404,7 +404,25 @@ span.card-text {
     font-size: 1.5rem;
     color: #ee550e;
 }
-
+#formCheckout h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #45474b;
+    color: #f2f2f2;
+  }
+  
+  #formCheckout div {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+  
+    > h3 {
+      margin-top: 1rem;
+      text-align: center;
+    }
+  }
+  
 /* Footer */
 footer {
     display: flex;
@@ -457,15 +475,107 @@ footer ul li a {
 #carrito span , p{
     font-size: 1.2rem;
 }
-.cuadro-carrito {
-    display: grid;
-    grid-template-columns: 1fr; 
-    gap: 10px;
-    text-align: center; 
-    background-color: #f4f4f4;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+.oferta-banner {
+    position: fixed;
+    right: 10px;
+    bottom: 25px;
+    transform: translateX(-30%);
+    width: 10rem;
+    height: auto;
+    z-index: 9999;
+       
+    border: 1px dotted #000;
+    
 
+  
 }
+
+/* Estilos del modal */
+dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+   
+    max-width: 600px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   
+   
+}
+
+/* Estilo del carrusel */
+.carrusel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* Botón de la izquierda */
+.carrusel-btn:first-of-type {
+  
+    margin-left: 14rem;
+    margin-bottom: 2rem;
+}
+
+
+
+/* Estilos del título y la descripción */
+h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* Estilo del precio */
+span {
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+/* Botones del pie de modal */
+button {
+    background-color: #f07d1e;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #a33c00c7;
+}
+
+/* Botón cerrar */
+button[type="button"]:first-of-type {
+    background-color: #4b0804;
+}
+
+button[type="button"]:first-of-type:hover {
+    background-color: #360505;
+}
+
+/* Fondo oscuro cuando el modal está abierto */
 
 
 

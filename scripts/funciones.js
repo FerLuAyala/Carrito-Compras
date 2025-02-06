@@ -1,3 +1,5 @@
+/*
+
 function cargarProductos(url, contenedor) {
     fetch(url)
         .then(response => response.json())
@@ -11,7 +13,7 @@ function cargarProductos(url, contenedor) {
                 let categoriaCoincide = true;
 
                 // Filtro por categoría
-                if (categoriaSeleccionada && producto['categoría'] !== categoriaSeleccionada) {
+                if (categoriaSeleccionada && producto['categoria'] !== categoriaSeleccionada) {
                     categoriaCoincide = false;
                 }
 
@@ -62,7 +64,7 @@ function cargarProductos(url, contenedor) {
 
                 const categoria = document.createElement('p');
                 categoria.classList.add('card-text');
-                categoria.textContent = `Categoría: ${producto['categoría']}`;
+                categoria.textContent = `Categoría: ${producto['categoria']}`;
 
 
                 const botonAgregar = document.createElement('button');
@@ -104,7 +106,6 @@ function cargarProductos(url, contenedor) {
             console.error('Error al cargar los productos:', error);
         });
 }
-
 
 
 function mostrarDetalleProducto(producto) {
@@ -211,11 +212,11 @@ function mostrarDetalleProducto(producto) {
     });
 }
 
-
 function agregarAlCarrito(producto) {
     carrito.agregarProducto(producto);
    
 }
+
 
 
 
@@ -398,6 +399,6 @@ function restarProducto(idProducto) {
 }
 
 
-
+*/ 
 
 
