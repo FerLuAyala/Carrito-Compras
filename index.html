@@ -14,25 +14,26 @@
 <body>
 
   
-    <header class="navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top" style="flex: auto">
-        <!-- Reemplazar por los datos que correspondan -->
-        <div class="container">
-            <h1>Programación I</h1>
-            <div class="nav-btns">
-                <button type="button" class="btn position-relative" data-bs-toggle="modal" data-bs-target="#cart">
-                    <i class="fa fa-shopping-cart"></i>
-                    <span class="position-absolute top-0 start-100 translate-middle badge bg-primary">0</span>
-                </button>
-                <button type="button" class="btn position-relative">
-                    <i class="fa fa-heart"></i>
-                    <span class="position-absolute top-0 start-100 translate-middle badge bg-primary">0</span>
-                </button>
-                <button type="button" class="btn position-relative">
-                    <i class="fa fa-search"></i>
+    <header>
+        <!-- Sección del logo y el carrito -->
+        <div class="header-container">
+            <div class="header-logo">
+                <h1>Programación I</h1>
+                <img src="img/logo.png" alt="logo de la empresa" class="logo-img">
+            </div>
+    
+            <div id="carrito">
+                <button class="otroBoton btn">
+                    <span class="cantidadCarrito">0</span>
+                    <div class="invis">
+                        <span class="totalCarrito">0</span>
+                    </div>
+                    <i class="fa-solid fa-cart-shopping"></i>
                 </button>
             </div>
         </div>
     </header>
+    
 
     <div id="banner">
         
@@ -45,46 +46,24 @@
        
         <h2>Catálogo de productos</h2>
 
-
-        <div id="carrito">
-            <div class="container cuadroBoton">
-                <div class="row align-items-center">
-                    <div class="col-12 col-md-6">
-                        <div class="cuadro-carrito">
-                            <p><span class="cantidadCarrito">0</span><i class="fa-solid fa-cart-shopping"></i></p>
-                            <p >Total $<span class="totalCarrito">0</span></p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-6">
-                    <div class="botonera">
-                        <button class="mostrarCarritoBtn btn-mostrar" type="button" data-bs-toggle="offcanvas"
-                            data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i
-                                class="fa-solid fa-cart-shopping"></i> Mi Carrito</button>
-                        <button class="mostrarCatalogo btn-catalogo" type="button">Catalogo</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-       
-
-
+        
        
 
         <section>
 
-            <div class="filtros">
-                <label for="filtro-categoria">Filtrar por categoría:</label>
+            
+           
 
-                <select id="filtro-categoria">
-                    
-                    <option value="">Todo</option>
-                    <option value="electrodomestico">Electrodomésticos</option>
-                    <option value="tecnologia">Tecnología</option>
-                    <option value="tv">TV</option>
-                </select>
+                <div id="filtro-categoria-botonera">
+                    <button class="filtro-categoria btn-filtro" data-categoria="">Todo</button>
+                    <button class="filtro-categoria btn-filtro" data-categoria="sillon">Sillones</button>
+                    <button class="filtro-categoria btn-filtro" data-categoria="mesas">Sillas y mesa</button>
+                    <button class="filtro-categoria btn-filtro" data-categoria="rackTV">Rack TV</button>
+                </div>
 
-                <label for="filtro-precio">Ordenar por precio:</label>
+                <div class="filtros">
+               
+                <label for="filtro-precio">Precio:</label>
                 <select id="filtro-precio">
                     <option value="">Seleccionar orden</option>
                     <option value="asc">Menor a Mayor</option>
@@ -92,31 +71,13 @@
                 </select>
 
             </div>
-        </section>
-        <div id="alertas"></div>
-        <section>
+       
             <div id="productos"></div>
         </section>
-
-        <section>
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasRight"
-                aria-labelledby="offcanvasRightLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Mi carrito de compras</h5>
-                    <button type="button" class="btn-close btn btn-primary" data-bs-dismiss="offcanvas"
-                        aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-
-                    <div id="productosCarrito"></div>
-
-                </div>
-            </div>
-        </section>
+       
+       
+      
     </main>
-
-
-
 
 
 
