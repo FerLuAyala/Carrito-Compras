@@ -16,10 +16,22 @@ img {
     height: auto;
 }
 
+.img-baner{
+    width: 25%;
+    margin: auto;
+}
+p{
+    text-align: center;
+    font-size: 1rem;
+    color: #575656;
+}
+
 body {
-    background-color: rgb(255, 205, 182);
-    font-family: "Open Sans", sans-serif;
-    font-size: 1.3rem;
+    background-color: rgb(248, 228, 219);
+
+    font-family: "Lexend", sans-serif; 
+ 
+    font-size: 0.5rem;
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.103);
     line-height: 1.8rem;
     overflow-x: hidden;
@@ -28,22 +40,32 @@ body {
 main {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: rgb(255, 205, 182);
+    background-color: rgba(255, 205, 182, 0.411);
 }
 
-/* Estilos para el header */
-/* Estilos generales del header */
+
 header {
     background-color: #f8f9fa;
-    /* Color de fondo claro */
     padding: 10px 20px;
+    position: fixed; 
+    top: 0; 
+    background-color: #fff;
+    box-shadow: 0 4px 2px -2px gray; 
+    z-index: 10;
+    width: 100%;
+
+    transition: background-color 0.3s ease;
 }
+
 
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 60px;
 }
 
 .header-logo {
@@ -52,7 +74,7 @@ header {
 }
 
 .logo-img {
-    max-height: 100px;
+    max-height: 80px;
     margin-left: 20px;
 }
 
@@ -60,8 +82,8 @@ header {
     background-color: #ee6e32;
     /* Color del carrito */
     color: white;
-    font-size: 1.5rem;
-    padding: 10px 20px;
+    font-size: 1.2rem;
+    padding: 10px 35px;
     border-radius: 25px;
     display: flex;
     align-items: center;
@@ -99,10 +121,10 @@ h1 {
 
 
 h2 {
-    font-size: 2.2rem;
-    font-weight: 600;
+    font-size: 2rem;
+    font-weight: 700;
     margin: auto;
-    color: #d0e0e3;
+    color: #5c5b5b;
     text-transform: uppercase;
     padding: 1rem;
     margin-bottom: 1rem;
@@ -113,21 +135,18 @@ h2 {
 }
 
 h3 {
-    font-weight: 600;
-    font-size: 1.5rem;
+    font-weight: 700;
+    font-size: 1rem;
 }
 
 
 
-/* Estilos para los productos */
-/* Estilos generales del contenedor de productos */
 #contenedor-productos {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
 }
 
-/* Estilos de cada tarjeta de producto */
 .tarjeta-producto {
     display: flex;
     justify-content: center;
@@ -135,7 +154,6 @@ h3 {
     padding: 5px;
 }
 
-/* Estilos de la tarjeta */
 .card {
     background-color: #fff;
     border-radius: 10px;
@@ -147,13 +165,13 @@ h3 {
 
 }
 
-/* Efecto hover para tarjetas */
+
 .card:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Estilo de la imagen */
+
 .card img {
     width: 100%;
     height: auto;
@@ -162,7 +180,7 @@ h3 {
     padding: 1rem;
 }
 
-/* Estilos del cuerpo de la tarjeta */
+
 .card-body {
     padding: 20px;
     display: flex;
@@ -170,28 +188,29 @@ h3 {
     justify-content: space-between;
 }
 
-/* Título del producto */
 .card-title {
     font-size: 1.2rem;
-    font-weight: bold;
+    text-transform: uppercase;
+    font-weight: 400;
     color: #333;
     margin: 0;
     margin-bottom: 10px;
-    text-transform: capitalize;
+   
 }
 
-/* Precio del producto */
+
 .card-text {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #ee6e32;
     font-weight: 700;
     margin-bottom: 10px;
 }
 
-/* Estilos para el contenedor de los botones */
 .btn-container {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
 
 }
 
@@ -200,32 +219,38 @@ h3 {
     color: #888;
 }
 
-/* Estilo para los botones  card*/
-.btn-detalle,
-.btn-agregar
 
-{
+.btn-detalle,
+.btn-agregar,
+.btn-checkout
+ {
     color: rgb(253, 111, 45);
     border: 1px solid rgb(255, 115, 0);
-    padding: 10px 25px;
+    padding: 10px 15px;
     font-size: 1rem;
+    font-weight: 700;
     border-radius: 3rem;
-    margin: 5px;
+    margin: 4px;
     display: flex;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
+    width: 50%;
+    text-transform: uppercase;
 }
 
 
 
 .btn-agregar i,
-.btn-detalle i {
+.btn-detalle i,
+.btn-checkout i {
     margin-right: 5px;
+    font-size: 1rem;
 
 }
 
 .btn-agregar:hover,
-.btn-detalle:hover {
+.btn-detalle:hover,
+.btn-checkout:hover {
     background-color: #ee6e32;
     color: #d0e0e3;
 }
@@ -281,16 +306,16 @@ h3 {
 
 
 
-
-#formCheckout h2 {
-    margin-bottom: 1.5rem;
-    text-align: center;
-    text-transform: uppercase;
-    background-color: #45474b;
-    color: #f2f2f2;
-}
-
-#formCheckout div {
+.modal-checkout {
+    font-size: 2rem;
+    color: #e9640c;
+    width: 100%;
+    max-width: 650px;
+    padding: 20px;
+    margin: auto;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     padding-bottom: 1rem;
@@ -301,6 +326,9 @@ h3 {
     }
 }
 
+
+
+
 /* Footer */
 footer {
     display: flex;
@@ -309,7 +337,7 @@ footer {
     align-items: center;
     width: 100%;
     padding: 2em;
-    background-color: #773203;
+    background-color: #df600c;
 }
 
 footer ul {
@@ -336,45 +364,78 @@ footer ul li a {
     color: #d0e0e3;
 }
 
-/*-----------------*/
 
+/* Estilo del banner oferta */
 .oferta-banner {
     position: fixed;
-    right: 10px;
-    bottom: 25px;
-    transform: translateX(-30%);
-    width: 10rem;
-    height: auto;
-    z-index: 9999;
-
-    border: 1px dotted #000;
-
-
-
+    bottom: 400px;
+    right: 20px;
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    padding: 10px;
+    animation: slideIn 0.5s ease-out;
+    transition: transform 0.3s, opacity 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-/* Estilos del modal carrito */
+
+.oferta-banner img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+
+.btn-cerrar {
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    transition: transform 0.3s;
+}
+
+.btn-cerrar:hover {
+    transform: scale(1.2);
+    color: #f00;
+}
+
+/* Animación de entrada */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
 
 
 
-
-/* Botones del pie de modal */
-
+/*Modal detalles y vacio*/
 
 
-/*Modal detalles*/
-
-
-.modal-detalle-producto {
-width: 100%;
-   max-width: 650px;
-   
+.modal-detalle-producto,
+.modal-vacio
+{
+    width: 100%;
+    max-width: 650px;
     padding: 20px;
     margin: auto;
     border: none;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    
+
 
 }
 
@@ -383,7 +444,7 @@ width: 100%;
     width: 75%;
     margin: auto;
     margin-top: 1.5rem;
-    
+
 
 
 
@@ -397,15 +458,15 @@ width: 100%;
 
 .modal-detalle-producto span {
     font-size: 1.2rem;
-    font-weight: 600;    
+    font-weight: 600;
     color: rgb(250, 114, 2);
-    
+
 }
 
 .modal-detalle-producto p {
     font-size: 1rem;
     padding: 1rem 1rem 0 0;
-    
+
 
 
 
@@ -414,12 +475,11 @@ width: 100%;
 .btn-navegacion {
     position: absolute;
     top: 35%;
-    background: rgba(250, 114, 2, 0.384);
+    background: rgb(250, 114, 2);
     color: white;
     border: none;
     padding: 0.8rem;
-    font-size: 1rem;
-    border-radius: 0.5rem;
+    font-size: 1rem;    
     transition: background 0.3s ease;
 }
 
@@ -433,10 +493,12 @@ width: 100%;
 
 .btn-navegacion:first-of-type {
     left: 1rem;
+    border-radius: 1.5rem 0 0 1.5rem;
 }
 
 .btn-navegacion:last-of-type {
     right: 1rem;
+    border-radius:0 1.5rem 1.5rem 0;
 }
 
 
@@ -451,7 +513,7 @@ width: 100%;
     border: none;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
+
 }
 
 .producto-element {
@@ -461,7 +523,8 @@ width: 100%;
     border-bottom: 1px solid #e0e0e0;
 }
 
-.modal-carrito {
+.modal-carrito
+ {
     align-items: center;
     margin-bottom: 15px;
     border-bottom: 1px solid rgba(128, 128, 128, 0.397);
@@ -470,12 +533,14 @@ width: 100%;
 
 .modal-carrito p {
     text-align: center;
+    font-size: 1rem;
+    font-weight: 200;
 }
 
 .modal-carrito img {
     display: flex;
     border-radius: 4px;
-    width:90%;
+    width: 90%;
     height: auto;
     margin: auto;
 }
@@ -483,6 +548,8 @@ width: 100%;
 .modal-carrito span {
     background-color: #e9640c;
     padding: 1rem 2rem;
+    font-size: 1.2rem;
+    color: #d0e0e3;
 }
 
 .producto-info {
@@ -500,6 +567,7 @@ width: 100%;
     align-items: center;
     justify-content: center;
     gap: 10px;
+   
 }
 
 .botones-acciones button {
@@ -508,15 +576,28 @@ width: 100%;
     cursor: pointer;
     font-size: 2rem;
     transition: background-color 0.2s ease;
+   
 }
 
-/* Hover para el botón de eliminar */
+.restar{
+    border-radius: 1.8rem 0 0 1.8rem; }
+
+    .sumar{
+        border-radius: 0 1.8rem  1.8rem 0; }
+
 .botones-acciones .btn:hover {
     background-color: #ee6e32;
     color: #e0e0e0;
 }
 
-/* Contenedor de total y finalización de compra */
+.tituloCarrito {
+    padding: 2rem;
+    background-color: #ee6e32;
+    color: #d0e0e3;
+    font-size: 1.2rem;
+}
+
+
 .resultado {
     margin-top: 20px;
     padding: 15px;
@@ -526,7 +607,7 @@ width: 100%;
     text-align: center;
 }
 
-/* Estilo para el total */
+
 .resultado p {
     margin: 5px 0;
     font-size: 1rem;
@@ -535,44 +616,80 @@ width: 100%;
     text-align: right;
 }
 
+.vacio-img{
+    width: 20%;
+    margin: auto;
+}
 
-#filtro-categoria-botonera {
-    display: flex; 
-    gap: 10px; 
-    flex-wrap: wrap; 
+.modal-vacio p{
+
+   
+    font-size: 1rem;
+}
+
+.msjCarrito h4{
+    font-size: 1rem;
+    text-align: center;
+}
+.tot-cuota {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.modal-checkout label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+.modal-checkout input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    align-items: center;
+}
+
+.modal-checkout input:focus, select:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+.pie-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.btn-checkout{
+    width: 100%;
 }
 
 
-.filtro-categoria {
-    padding: 10px 20px;  
-    font-size: 1.5rem; 
-    cursor: pointer; 
-    background-color: #ee6e32;  
-    border: 1px solid #f7f5f5; 
-    color:#f3efef;
-    border-radius: 5rem;  
-    transition: background-color 0.3s;  
-    flex: 1 1 calc(50% - 10px);
-    box-sizing: border-box; 
+
+/* Erros de validação */
+small {
+    color: red;
+    font-size: 12px;
+    display: block;
+    margin-top: 5px;
 }
-
-
-.filtro-categoria:hover {
-    background-color: #f7f4f4; 
-    border: 1px solid #ee6e32;
-    color: #ee6e32;
-}
-
-
 
 @media (min-width: 992px) {
 
-    #filtro-categoria-botonera {
-        justify-content: center;
-    }
-
-    .filtro-categoria {
-        flex: 0 1 auto;  /* Los botones se organizarán en una sola fila */
+    .carousel {
+        position: relative;
+        margin-top: 4rem;
     }
 
 
@@ -586,7 +703,7 @@ width: 100%;
     .filtros {
         display: flex;
         flex-direction: row;
-        align-items: end;
+        align-items: center;
         width: 100%;
     }
 
@@ -628,7 +745,7 @@ width: 100%;
 
     .modal-carrito p {
         margin: 1rem;
-        
+
     }
 
     .modal-carrito img {
@@ -650,7 +767,7 @@ width: 100%;
 
 
 
-    /* Botones de sumar/restar */
+
     .botones-acciones {
         display: flex;
         align-items: center;
@@ -659,7 +776,7 @@ width: 100%;
 
     }
 
-    /* Botón de sumar y restar */
+
     .botones-acciones button {
         padding: 5px 10px;
         border: 1px solid #ee6e32;
@@ -669,13 +786,12 @@ width: 100%;
     }
 
 
-    /* Hover para el botón de eliminar */
+
     .botones-acciones .btn:hover {
         background-color: #ee6e32;
         color: #e0e0e0;
     }
 
-    /* Contenedor de total y finalización de compra */
     .resultado {
         margin-top: 20px;
         padding: 15px;
@@ -687,7 +803,6 @@ width: 100%;
         margin-bottom: 2rem;
     }
 
-    /* Estilo para el total */
     .resultado p {
         margin: 5px 0;
         font-size: 1rem;

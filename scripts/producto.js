@@ -10,180 +10,179 @@ class Producto {
         this.categoria = categoria;
     }
     cargarProductos(url, contenedor) {
-        let categoriaSeleccionada = ''; 
 
-        
         fetch(url)
             .then(response => response.json())
             .then(productos => {
 
-               
-                const botonesFiltro = document.querySelectorAll('.filtro-categoria');
+                const categoriaSeleccionada = filtroCategoria.value;
+                const precioSeleccionado = filtroPrecio.value;
 
-           
-                botonesFiltro.forEach(boton => {
-                    boton.addEventListener('click', () => {
-                        categoriaSeleccionada = boton.getAttribute('data-categoria');
-                        filtrarYMostrarProductos(productos); 
+                const productosFiltrados = productos
+                    .filter(producto => {
+                        // Filtro por categoría
+                        if (categoriaSeleccionada && producto['categoria'] !== categoriaSeleccionada) {
+                            return false;
+                        }
+                        return true;
+                    })
+                    .sort((a, b) => {
+                        // Filtro  precio
+                        if (precioSeleccionado === 'asc') {
+                            return a.precio - b.precio;
+                        } else if (precioSeleccionado === 'desc') {
+                            return b.precio - a.precio;
+                        }
+                        return 0;
                     });
+
+
+                contenedor.innerHTML = '';
+
+
+                productosFiltrados.forEach(producto => {
+                    const tarjetaProducto = document.createElement('div');
+                    tarjetaProducto.classList.add('tarjeta-producto');
+
+                    const card = document.createElement('div');
+                    card.classList.add('card');
+
+                    const img = document.createElement('img');
+                    img.src = `./${producto.imagen}`;
+                    img.alt = producto.nombre;
+
+                    const cardBody = document.createElement('div');
+                    cardBody.classList.add('card-body');
+
+                    const tit = document.createElement('h3');
+                    tit.classList.add('card-title');
+                    tit.textContent = producto.nombre;
+
+                    const precio = document.createElement('h4');
+                    precio.classList.add('card-text');
+                    precio.textContent = `Precio: $${producto.precio.toFixed(2)}`;
+
+                    const categoria = document.createElement('p');
+                    categoria.classList.add('card-cat');
+                    categoria.textContent = `Categoría: ${producto['categoria']}`;
+
+                    const btnContainer = document.createElement('div');
+                    btnContainer.classList.add('btn-container');
+
+                    const botonAgregar = document.createElement('button');
+                    botonAgregar.classList.add('btn-agregar');
+                    const iconoCarrito = document.createElement('i');
+                    iconoCarrito.classList.add('fas', 'fa-shopping-cart');
+                    botonAgregar.prepend(iconoCarrito);
+                    botonAgregar.append(' Agregar');
+
+                    btnContainer.appendChild(botonAgregar);
+                    const botonDetalle = document.createElement('button');
+                    botonDetalle.classList.add('btn-detalle');
+                    const iconoVer = document.createElement('i');
+                    iconoVer.classList.add('fas', 'fa-eye');
+                    botonDetalle.prepend(iconoVer);
+                    botonDetalle.setAttribute('data-id', producto.id);
+                    botonDetalle.append(' Ver');
+                    btnContainer.appendChild(botonDetalle);
+
+
+
+                    // Agregar los elementos al cardBody
+                    cardBody.appendChild(tit);
+                    cardBody.appendChild(precio);
+                    cardBody.appendChild(categoria);
+                    cardBody.appendChild(btnContainer);
+
+
+
+
+                    // Agregar la imagen y el cuerpo del card al card
+                    card.appendChild(img);
+                    card.appendChild(cardBody);
+
+                    // Agregar el card al contenedor de productos
+                    tarjetaProducto.appendChild(card);
+                    contenedor.appendChild(tarjetaProducto);
+
+                    // Agregar eventos a los botones
+
+                    botonAgregar.addEventListener('click', () => {
+                        agregarAlCarrito(producto);
+                    });
+
+                    botonDetalle.addEventListener('click', () => {
+                        this.mostrarDetalleProducto(producto);
+                    });
+
+                   
+                    img.addEventListener('click', (e) => {
+                        e.preventDefault(); 
+                        this.mostrarDetalleProducto(producto); 
+                    });
+
                 });
 
-                const filtrarYMostrarProductos = (productos) => {
-                    const precioSeleccionado = filtroPrecio.value;
+                // Mostrar oferta especial si hay una categoría seleccionada
+                if (categoriaSeleccionada) {
+                    this.mostrarOfertaEspecial(categoriaSeleccionada);
+                }
 
-                    const productosFiltrados = productos
-                        .filter(producto => {
-                            if (categoriaSeleccionada && producto['categoria'] !== categoriaSeleccionada) {
-                                return false;
-                            }
-                            return true;
-                        })
-                        .sort((a, b) => {
-                            if (precioSeleccionado === 'asc') {
-                                return a.precio - b.precio;
-                            } else if (precioSeleccionado === 'desc') {
-                                return b.precio - a.precio;
-                            }
-                            return 0;
-                        });
-
-                   
-                    contenedor.innerHTML = '';
-
-                    
-                    productosFiltrados.forEach(producto => {
-                        const tarjetaProducto = document.createElement('div');
-                        tarjetaProducto.classList.add('tarjeta-producto');
-
-                        const card = document.createElement('div');
-                        card.classList.add('card');
-
-                        const img = document.createElement('img');
-                        img.src = `./${producto.imagen}`;
-                        img.alt = producto.nombre;
-
-                        const cardBody = document.createElement('div');
-                        cardBody.classList.add('card-body');
-
-                        const tit = document.createElement('h3');
-                        tit.classList.add('card-title');
-                        tit.textContent = producto.nombre;
-
-                        const precio = document.createElement('h4');
-                        precio.classList.add('card-text');
-                        precio.textContent = `Precio: $${producto.precio.toFixed(2)}`;
-
-                        const categoria = document.createElement('p');
-                        categoria.classList.add('card-cat');
-                        categoria.textContent = `Categoría: ${producto['categoria']}`;
-
-                        const btnContainer = document.createElement('div');
-                        btnContainer.classList.add('btn-container');
-
-                        const botonAgregar = document.createElement('button');
-                        botonAgregar.classList.add('btn-agregar');
-                        const iconoCarrito = document.createElement('i');
-                        iconoCarrito.classList.add('fas', 'fa-shopping-cart');
-                        botonAgregar.prepend(iconoCarrito);
-                        botonAgregar.append(' Agregar');
-
-                        btnContainer.appendChild(botonAgregar);
-                        const botonDetalle = document.createElement('button');
-                        botonDetalle.classList.add('btn-detalle');
-                        const iconoVer = document.createElement('i');
-                        iconoVer.classList.add('fas', 'fa-eye');
-                        botonDetalle.prepend(iconoVer);
-                        botonDetalle.setAttribute('data-id', producto.id);
-                        botonDetalle.append(' Ver');
-                        btnContainer.appendChild(botonDetalle);
-
-                       
-                        cardBody.appendChild(tit);
-                        cardBody.appendChild(precio);
-                        cardBody.appendChild(categoria);
-                        cardBody.appendChild(btnContainer);
-
-                       
-                        card.appendChild(img);
-                        card.appendChild(cardBody);
-
-                        
-                        tarjetaProducto.appendChild(card);
-                        contenedor.appendChild(tarjetaProducto);
-
-                        botonAgregar.addEventListener('click', () => {
-                            agregarAlCarrito(producto);
-                        });
-
-                        botonDetalle.addEventListener('click', () => {
-                            this.mostrarDetalleProducto(producto);
-                        });
-
-                        
-                        img.addEventListener('click', (e) => {
-                            e.preventDefault();
-                            this.mostrarDetalleProducto(producto);
-                        });
-                    });
-
-                   
-                    if (categoriaSeleccionada) {
-                        this.mostrarOfertaEspecial(categoriaSeleccionada);
-                    }
-                };
-
-              
-                filtrarYMostrarProductos(productos);
 
             })
             .catch(error => {
                 console.error('Error al cargar los productos:', error);
             });
-
     }
 
     mostrarOfertaEspecial(categoriaSeleccionada) {
-     
-        const ofertaBanner = document.createElement('img');
-     
+
+        const ofertaBanner = document.createElement('div');
         ofertaBanner.classList.add('oferta-banner');
-     
+
+
+        const imgOferta = document.createElement('img');
         let mensajeOferta = '';
-        
+
+
         switch (categoriaSeleccionada) {
-            case 'sillon':
-                mensajeOferta = '/desc.jpg';
-                
+            case 'mesas':
+                mensajeOferta = 'img/descSilla.jpg';
                 break;
-            case 'mesa':
-                mensajeOferta = '/desc.jpg';
-                
+            case 'sillon':
+                mensajeOferta = 'img/descSillon.jpg';
                 break;
             case 'rackTV':
-                mensajeOferta = '/desc.jpg';
-             
+                mensajeOferta = 'img/descRack.jpg';
                 break;
             default:
-                mensajeOferta = '/desc.jpg';
-               
-                break;
+                mensajeOferta = 'img/descDias.jpg'
+                return; 
         }
 
-       
-        ofertaBanner.src = mensajeOferta;
-       
+        imgOferta.src = mensajeOferta;
+        imgOferta.alt = `Oferta especial para ${categoriaSeleccionada}`;
+
+
+        const closeBtn = document.createElement('button');
+        closeBtn.classList.add('btn-cerrar');
+        closeBtn.innerText = 'X';
+        closeBtn.addEventListener('click', () => ofertaBanner.remove());
+
+
+        ofertaBanner.appendChild(imgOferta);
+        ofertaBanner.appendChild(closeBtn);
 
         const bannerContainer = document.getElementById('banner');
-        bannerContainer.innerHTML = ''; 
+        bannerContainer.innerHTML = '';
         bannerContainer.appendChild(ofertaBanner);
-     
 
-        // Eliminar después de 10 segundos
         setTimeout(() => {
             ofertaBanner.remove();
-
         }, 10000);
+
     }
+
 
 
     mostrarDetalleProducto(producto) {
@@ -297,6 +296,9 @@ class Producto {
             }
         });
 
+    
+
+
         btnContainer.appendChild(agregarFooter);
         btnContainer.appendChild(cerrarFooter);
 
@@ -314,7 +316,8 @@ class Producto {
         });
     }
 
-
+  
+    
 
 
 }

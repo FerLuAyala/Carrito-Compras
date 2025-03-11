@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="estilos/estilos.css" />
@@ -13,7 +18,7 @@
 
 <body>
 
-  
+
     <header>
         <!-- Sección del logo y el carrito -->
         <div class="header-container">
@@ -21,7 +26,7 @@
                 <h1>Programación I</h1>
                 <img src="img/logo.png" alt="logo de la empresa" class="logo-img">
             </div>
-    
+
             <div id="carrito">
                 <button class="otroBoton btn">
                     <span class="cantidadCarrito">0</span>
@@ -33,36 +38,94 @@
             </div>
         </div>
     </header>
-    
 
-    <div id="banner">
-        
-          
+
+    <div>
+
+        <div class="carousel slide" id="miSlider" data-bs-ride="carousel">
+
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="carousel-banner cr-slide-1" title="ofertas">
+                        <img src="img/bannerM1 (3).png" class="img-fluid" alt="banner con ofertas">
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="carousel-banner  cr-slide-2" title="descuentos">
+                        <img src="img/bannerM1.png" class="img-fluid" alt="banner con descuentos">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-banner  cr-slide-3" title="cibermonday">
+                        <img src="img/bannerM2.png" class="img-fluid" alt="banner cibermonday">
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#miSlider" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+
+            <button class="carousel-control-next" type="button" data-bs-target="#miSlider" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#miSlider" data-bs-slide-to="0" class="active"
+                    aria-current="true"></button>
+                <button type="button" data-bs-target="#miSlider" data-bs-slide-to="1" class=""></button>
+                <button type="button" data-bs-target="#miSlider" data-bs-slide-to="2" class=""></button>
+            </div>
+
+        </div>
     </div>
 
-      
+
     <main class="container">
 
-       
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-4 col-md-4">
+                    <img src="img/descuento.png" class="img-baner" alt="imagen del local completo">
+                    <p>Descuento increibles</p>>
+                </div>
+                <div class="col-4 col-md-4">
+                    <img src="img/envio.png" class="img-baner" alt="imagen del local completo">
+                    <p>Envios Gratis</p>
+                </div>
+                <div class="col-4 col-md-4">
+                    <img src="img/tarjeta.png" class="img-baner" alt="imagen del local completo">
+                    <p>todas las tarjetas</p>
+                </div>
+            </div>
+
+
+        </div>
+
+
         <h2>Catálogo de productos</h2>
 
-        
-       
+
+
 
         <section>
 
-            
-           
+            <div class="filtros">
+                <label for="filtro-categoria">Categoría:</label>
 
-                <div id="filtro-categoria-botonera">
-                    <button class="filtro-categoria btn-filtro" data-categoria="">Todo</button>
-                    <button class="filtro-categoria btn-filtro" data-categoria="sillon">Sillones</button>
-                    <button class="filtro-categoria btn-filtro" data-categoria="mesas">Sillas y mesa</button>
-                    <button class="filtro-categoria btn-filtro" data-categoria="rackTV">Rack TV</button>
-                </div>
+                <select id="filtro-categoria">
 
-                <div class="filtros">
-               
+                    <option value="">Todo</option>
+                    <option value="mesas">mesas y sillas</option>
+                    <option value="sillon">sillon</option>
+                    <option value="rackTV">rackTV</option>
+                </select>
+
                 <label for="filtro-precio">Precio:</label>
                 <select id="filtro-precio">
                     <option value="">Seleccionar orden</option>
@@ -71,13 +134,18 @@
                 </select>
 
             </div>
-       
+        </section>
+        <div id="alertas"></div>
+        <section>
             <div id="productos"></div>
         </section>
-       
-       
-      
+        <div id="banner"></div>
+
+
     </main>
+
+
+
 
 
 
@@ -96,8 +164,8 @@
         </ul>
     </footer>
     <script src="scripts/producto.js"></script>
-    <script src="scripts/funciones.js"></script>
-    
+
+
     <script src="scripts/claseCarrito.js"></script>
     <script src="index.js"></script>
 
