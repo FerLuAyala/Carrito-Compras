@@ -312,6 +312,8 @@ class Carrito {
     checkout() {
         console.log("pago");
 
+
+
         const provincias = [
             'Buenos Aires', 'Ciudad Autónoma de Buenos Aires', 'Córdoba', 'Entre Ríos'];
 
@@ -320,6 +322,15 @@ class Carrito {
         document.body.prepend(checkoutModal);
         checkoutModal.showModal();
         checkoutModal.addEventListener('close', () => checkoutModal.remove());
+
+        const carritoTotal =document.createElement('div');
+        carritoTotal.classList.add('carrito-car');
+        checkoutModal.appendChild(carritoTotal);
+        const peTotal = document.createElement('p');
+        const totalC = carrito.obtenerTotal().toFixed(2);
+        peTotal.textContent = `Total carrito: $ ${totalC}`;
+        carritoTotal.appendChild(peTotal);
+
 
 
 
@@ -334,9 +345,10 @@ class Carrito {
         // nombre
         const nombreFormDiv = document.createElement('div');
         const nombreFormLabel = document.createElement('label');
+        //etiqueta label
         nombreFormLabel.setAttribute('for', 'nombre');
         nombreFormLabel.textContent = 'Nombre: ';
-
+        //campo input
         const nombreFormInput = document.createElement('input');
         nombreFormInput.setAttribute('id', 'nombre');
         nombreFormInput.setAttribute('type', 'text');
@@ -554,6 +566,12 @@ class Carrito {
         const totCuota = document.createElement('p');
         divCuota.appendChild(totCuota);
 
+        const divTotal = document.createElement('div');
+        divTotal.classList.add('tot-cuota');
+        const pTotal = document.createElement('p');
+        const total = carrito.obtenerTotal();
+        totCuota.textContent = `Total carrito: ${total}`;
+        divTotal.appendChild(pTotal);
 
 
         cuotasFormDiv.append(cuotasFormLabel, cuotasFormSelect, divCuota);

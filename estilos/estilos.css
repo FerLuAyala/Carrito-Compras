@@ -74,7 +74,7 @@ header {
 }
 
 .logo-img {
-    max-height: 80px;
+    width: 50%;
     margin-left: 20px;
 }
 
@@ -139,7 +139,10 @@ h3 {
     font-size: 1rem;
 }
 
-
+.carousel {
+        
+    margin-top: 5rem;
+}
 
 #contenedor-productos {
     display: grid;
@@ -675,7 +678,14 @@ footer ul li a {
     width: 100%;
 }
 
-
+.carrito-car{
+    padding: 1rem;
+    background-color: #df600c;
+}
+.carrito-car p {
+    color: #f8f5f2;
+    font-size: 1.2rem;
+}
 
 /* Erros de validação */
 small {
@@ -688,7 +698,7 @@ small {
 @media (min-width: 992px) {
 
     .carousel {
-        position: relative;
+        
         margin-top: 4rem;
     }
 

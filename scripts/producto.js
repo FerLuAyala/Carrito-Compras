@@ -230,7 +230,6 @@ class Producto {
         modal.appendChild(carruselContenedor);
 
 
-
         const descripcion = document.createElement('p');
         descripcion.textContent = `${producto.descripcion}`;
 
@@ -296,13 +295,8 @@ class Producto {
             }
         });
 
-    
-
-
         btnContainer.appendChild(agregarFooter);
         btnContainer.appendChild(cerrarFooter);
-
-
 
         document.body.appendChild(modal);
         modal.showModal();
